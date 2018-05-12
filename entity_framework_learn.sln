@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ef_core_logtesting", "entity_framework_learn\ef_core_logtesting.csproj", "{401F1C0E-CF1F-4DD1-8158-4E9626767E22}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1F76E156-C233-4EB6-8507-1734BA6BC6BB}"
+	ProjectSection(SolutionItems) = preProject
+		ReadME.txt = ReadME.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{401F1C0E-CF1F-4DD1-8158-4E9626767E22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{401F1C0E-CF1F-4DD1-8158-4E9626767E22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{401F1C0E-CF1F-4DD1-8158-4E9626767E22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{401F1C0E-CF1F-4DD1-8158-4E9626767E22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7CEA0386-B711-4C70-86E8-A92D9EE74831}
+	EndGlobalSection
+EndGlobal
