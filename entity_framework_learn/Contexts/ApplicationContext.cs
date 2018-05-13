@@ -13,11 +13,14 @@ namespace entity_framework_learn.Contexts
     {
 		public DbSet<User> Users { get; set; }
         private readonly ILoggerFactory _loggerFactory;
-		public ApplicationContext(ILoggerFactory loggerFactory)
+		public ApplicationContext(ILoggerFactory loggerFactory):base()
 		{
-			Database.EnsureCreated();
-            Console.WriteLine("WE HAVE loggerFactory");
+            
+        
             _loggerFactory = loggerFactory;
+            Database.EnsureCreated();
+
+            
 		}
 
 
@@ -34,14 +37,11 @@ namespace entity_framework_learn.Contexts
             Console.WriteLine("UseLoggerFactory");
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.EnableSensitiveDataLogging(true);
-          //  optionsBuilder.UseLoggerFactory(_loggerFactory);
 
-            Console.WriteLine("AfterUseLoggerFactorr");
-          
             optionsBuilder.UseSqlServer(conf.GetConnectionString("BloggingDatabase"));
-        //    optionsBuilder.UseLoggerFactory(_loggerFactory);
-            optionsBuilder.UseLoggerFactory(new LoggerFactory().AddConsole());//почему-то только так работает???
 
+            optionsBuilder.UseLoggerFactory(_loggerFactory);
+    
 		}
        
     }

@@ -13,21 +13,13 @@ namespace entity_framework_learn
     {
 		static void Main(string[] args)
         {
-            //ILoggerFactory lf = new LoggerProvider();
+            ILoggerFactory lf = new LoggerFactory();
           
-            var lf = new LoggerFactory().AddConsole();
-        //    var clf = lf.AddConsole();
-          //  lf.
-        //    lf.AddDebug();
-         //   lf.AddProvider(new MyLoggerProvider());
-         
-           // lf.AddConsole(LogLevel.Trace);
-         //   var log = lf.CreateLogger("MyConsoleLogger");
-          //  log.LogInformation("HELLO");
-            Console.WriteLine("Before Context Create");
+
+               lf.AddProvider(new MyLoggerProvider());
+
             using (ApplicationContext db = new ApplicationContext(lf))
 			{
-                //   db.Database.
                 	User u1 = new User() { Name = "Tolik", Age = 31 };
                     User u2 = new User() { Name = "Alkogolik", Age = 28 };
 
@@ -36,12 +28,12 @@ namespace entity_framework_learn
 
                     db.SaveChanges();
                     
-                 var us = db.Users.ToList<User>();
+             /*    var us = db.Users.ToList<User>();
                 foreach (User u in us)
                     {
                           Console.WriteLine(u.Name);
                     }
-                 
+                 */
                
 			}
 
