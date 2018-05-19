@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 //using Microsoft.EntityFrameworkCore
-using entity_framework_learn.Models;
+using DBLibrary.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace entity_framework_learn.Contexts
+namespace DBLibrary.Contexts
 {
     public class ApplicationContext : DbContext
     {
 		public DbSet<User> Users { get; set; }
+        public DbSet<Order> Orders { get; set; }
         private readonly ILoggerFactory _loggerFactory;
 		public ApplicationContext(ILoggerFactory loggerFactory):base()
 		{
@@ -34,7 +35,7 @@ namespace entity_framework_learn.Contexts
 			.AddJsonFile("appsettings.json")
 			.Build();
 
-            Console.WriteLine("UseLoggerFactory");
+            
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.EnableSensitiveDataLogging(true);
 
@@ -43,6 +44,12 @@ namespace entity_framework_learn.Contexts
             optionsBuilder.UseLoggerFactory(_loggerFactory);
     
 		}
+
+        protected override void OnModelCreating(ModelBuilder model)
+        {
+            model.Entity<Order>();
+            model.Entity<User>();
+        }
        
     }
 }

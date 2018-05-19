@@ -10,6 +10,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		ReadME.txt = ReadME.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBLibrary", "DBLibrary\DBLibrary.csproj", "{28636D05-5001-40C3-B354-92FD76535512}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryWithJoin", "QueryWithJoin\QueryWithJoin.csproj", "{D5C9E525-C8E2-45DF-99F6-4A3FC83CD9CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +24,14 @@ Global
 		{401F1C0E-CF1F-4DD1-8158-4E9626767E22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{401F1C0E-CF1F-4DD1-8158-4E9626767E22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{401F1C0E-CF1F-4DD1-8158-4E9626767E22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28636D05-5001-40C3-B354-92FD76535512}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28636D05-5001-40C3-B354-92FD76535512}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28636D05-5001-40C3-B354-92FD76535512}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28636D05-5001-40C3-B354-92FD76535512}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5C9E525-C8E2-45DF-99F6-4A3FC83CD9CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5C9E525-C8E2-45DF-99F6-4A3FC83CD9CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5C9E525-C8E2-45DF-99F6-4A3FC83CD9CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5C9E525-C8E2-45DF-99F6-4A3FC83CD9CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

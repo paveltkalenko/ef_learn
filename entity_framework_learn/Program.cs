@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
-using entity_framework_learn.Contexts;
-using entity_framework_learn.Models;
+using DBLibrary.Contexts;
+using DBLibrary.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 //using Microsoft.Extensions.Logging.Console;
@@ -20,20 +20,26 @@ namespace entity_framework_learn
 
             using (ApplicationContext db = new ApplicationContext(lf))
 			{
-                	User u1 = new User() { Name = "Tolik", Age = 31 };
-                    User u2 = new User() { Name = "Alkogolik", Age = 28 };
-
-                    db.Users.Add(u1);
-                    db.Users.Add(u2);
-
-                    db.SaveChanges();
+                 //  	User u1 = new User() { Name = "Tolik", Age = 31 };
+                //     User u2 = new User() { Name = "Alkogolik", Age = 28 };
+                //   Order o1 = new Order() { UserId = 9, description = "Tolik-1 buy shoes" };
+               //    db.Users.Add(u1);
+                //     db.Users.Add(u2);
+                //      db.Orders.Add(o1);
+                //        db.SaveChanges();
+          
+               
                     
-             /*    var us = db.Users.ToList<User>();
-                foreach (User u in us)
+                    var query = (from u in db.Users
+                                 join o in db.Orders on u.Id equals o.UserId
+                                 select new { Name = u.Name, Description = o.description }).ToList();
+                    
+                    foreach (var u in query)
                     {
-                          Console.WriteLine(u.Name);
+                        Console.WriteLine($"{u.Name}\t{u.Description}");
                     }
-                 */
+
+                
                
 			}
 
